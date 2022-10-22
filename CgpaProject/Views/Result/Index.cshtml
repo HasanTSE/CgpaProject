@@ -1,0 +1,37 @@
+﻿@model IEnumerable<Result>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<p>
+    <a asp-action="Create"  class="btn btn-info">Add New Result Sheet</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th> @Html.DisplayNameFor(model=>model.Id) </th>
+            <th> @Html.DisplayNameFor(model=>model.SerialNumber) </th>
+            <th> @Html.DisplayNameFor(model=>model.StudentName) </th>
+            <th>Action</th>
+        </tr>
+   </thead>
+
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelitem => item.Id)</td>
+                <td>@Html.DisplayFor(modelitem => item.SerialNumber)</td>
+                <td>@Html.DisplayFor(modelitem => item.StudentName)</td>
+
+                <td>
+                   @*<a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-success">Update </a>*@
+                   <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
