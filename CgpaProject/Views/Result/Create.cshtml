@@ -17,30 +17,40 @@
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
 
-                <div class="row justify-content-md-center">
-                <div class="col-md-auto">
+                @*<div class="row justify-content-md-center">
+                <div class="col-md-auto">*@
 
-
+                    <div class="row">     
+                    <div class="col"> 
+                        
+                    
                                  <div class="form-group">
                             <label asp-for="SerialNumber" class="control-label"></label>
                             <input asp-for="SerialNumber" class="form-control" readonly/>
                             <span asp-validation-for="SerialNumber" class="text-danger"></span>
                                  </div>
-
+                    </div>
+                    <div class="col"> 
                                  
                                  <div class="form-group">
                             <label asp-for="StudentName" class="control-label"></label>
                             <input asp-for="StudentName" class="form-control"/>
                             <span asp-validation-for="StudentName" class="text-danger"></span>
                                  </div>
+                    </div>
+                    </div>
 
+                      <div class="row">
+                       <div class="col">
                                         
                                  <div class="form-group">
                             <label asp-for="SubjectId" class="control-label"></label>
                             <select asp-for="SubjectId" class="form-control" asp-items="ViewBag.SubjectId">
                             <option value="0" selected>--Select--</option>
                                 </select>
-                          </div>
+                               </div>
+                     </div>
+                     <div class="col">
 
                            <div class="form-group">
                             <label asp-for="FirstNumber" class="control-label"></label>
@@ -48,27 +58,42 @@
                             <span asp-validation-for="FirstNumber" class="text-danger"></span>
                                  </div>
 
+                      </div>
+                   <div class="col">
+
                           <div class="form-group">
                             <label asp-for="FirstNumberPoint" class="control-label"></label>
-                            <input asp-for="FirstNumberPoint" class="form-control"/>
+                            <input asp-for="FirstNumberPoint" class="form-control" readonly/>
                             <span asp-validation-for="FirstNumberPoint" class="text-danger"></span>
                                  </div>
-                             
+                      </div> 
+                     
+                      <div class="col">
+                      
                             
                           <div class="form-group">
                             <label asp-for="FirstNumberGrade" class="control-label"></label>
-                            <input asp-for="FirstNumberGrade" class="form-control"/>
+                            <input asp-for="FirstNumberGrade" class="form-control" readonly/>
                             <span asp-validation-for="FirstNumberGrade" class="text-danger"></span>
                                  </div>
                              
-                                      
+                         </div>
+                         </div>
+
+                       <div class="row">
+                       <div class="col">
                                     
                                  <div class="form-group">
                             <label asp-for="SecondSubjectId" class="control-label"></label>
                             <select asp-for="SecondSubjectId" class="form-control" asp-items="ViewBag.SecondSubjectId">
                             <option value="0" selected>--Select--</option>
                                 </select>
-                          </div>
+                                </div>
+
+                     </div>
+                     <div class="col">
+
+
 
                            <div class="form-group">
                             <label asp-for="SecondNumber" class="control-label"></label>
@@ -76,48 +101,61 @@
                             <span asp-validation-for="SecondNumber" class="text-danger"></span>
                                  </div>
 
+                    </div>
+                    <div class="col">
+
                           <div class="form-group">
                             <label asp-for="SecondNumberPoint" class="control-label"></label>
-                            <input asp-for="SecondNumberPoint" class="form-control"/>
+                            <input asp-for="SecondNumberPoint" class="form-control" readonly/>
                             <span asp-validation-for="SecondNumberPoint" class="text-danger"></span>
                                  </div>
-                             
+                     </div>
+                     <div class="col">
                             
                           <div class="form-group">
                             <label asp-for="SecondNumberGrade" class="control-label"></label>
-                            <input asp-for="SecondNumberGrade" class="form-control"/>
+                            <input asp-for="SecondNumberGrade" class="form-control" readonly/>
                             <span asp-validation-for="SecondNumberGrade" class="text-danger"></span>
                                  </div>
-                             
-                                 
+                      </div>
+                      </div>
+                     
+                       <div class="row">
+                       <div class="col">
                             
                           <div class="form-group">
                             <label asp-for="TotalNumber" class="control-label"></label>
-                            <input asp-for="TotalNumber" class="form-control"/>
+                            <input asp-for="TotalNumber" class="form-control" readonly/>
                             <span asp-validation-for="TotalNumber" class="text-danger"></span>
                                  </div>
-                             
+                       </div>
+                       <div class="col">
                                           
                             
                           <div class="form-group">
                             <label asp-for="TotalPoint" class="control-label"></label>
-                            <input asp-for="TotalPoint" class="form-control"/>
+                            <input asp-for="TotalPoint" class="form-control" readonly/>
                             <span asp-validation-for="TotalPoint" class="text-danger"></span>
                                  </div>
-                             
+                        </div>
+                        </div>
+                      
+                       <div class="row">
+                       <div class="col">
                                                  
                             
                           <div class="form-group">
                             <label asp-for="TotalGrade" class="control-label"></label>
-                            <input asp-for="TotalGrade" class="form-control"/>
+                            <input asp-for="TotalGrade" class="form-control" readonly/>
                             <span asp-validation-for="TotalGrade" class="text-danger"></span>
                                  </div>
 
-                         
+                        </div>
+                        <div class="col">
                             
                           <div class="form-group">
                             <label asp-for="Status" class="control-label"></label>
-                            <input asp-for="Status" class="form-control"/>
+                            <input asp-for="Status" class="form-control" readonly/>
                             <span asp-validation-for="Status" class="text-danger"></span>
                                  </div>
 
@@ -125,6 +163,9 @@
                           </div>
                           </div>
                         
+
+
+
                           <br />
 
                  <div class="form-group">
@@ -132,13 +173,13 @@
                     <a asp-action="Index"class="btn btn-secondary">Back</a>
                     <input type="submit" value="Create" id="CreateBtn" class="btn btn-primary"/>
                      
-         </div>
+                 </div>
            
           
             </form>
         
      </div>
-                             
+        
                                       
                             
     
@@ -150,6 +191,7 @@
             updateCalculation();
         });  
          $('#SecondNumber').change(function () {
+            // alert("SecondNumber");
             updateCalculation();
         }); 
 
@@ -157,71 +199,214 @@
 
     function updateCalculation() {
              
+      
+
             var fstNum = 0;
-            var scndNum =0;
-            var tNum = 0;
-            var status = 0;
+            var fstgrd = "";
+            var fstPoint = 0;
+      //  alert(fstNum);
+            var scndNum = 0;
+            var scndgrd = "";
+            var scndPoint = 0;
+            //////
+            var totalNum = 0;
+            var totalPoint = 0
+            var totalGrade = "";
+            
+            var status = "";
              
 
     fstNum =  $('#FirstNumber').val();
+       // alert(fstNum);
     scndNum =  $('#SecondNumber').val();
 
-        tNum = fstNum + scndNum;
 
-        status = tNum * 0.5;
+    ////////////////////////
 
-            $('#TotalNumber').val(tNum);
-            $('#Status').val(status);
+
+        
+            if (fstNum >= 80 && fstNum <= 100) {
+                fstgrd = "A+";
+                fstPoint = 5.0;
+                //fstPoint = "GPA:"+5.0;
+
+            }
+            else if (fstNum >= 70 && fstNum < 80) {
+                fstgrd = "A";
+                fstPoint = 4.0;
+            }
+            else if (fstNum >= 60 && fstNum < 70) {
+                fstgrd = "A-";
+                fstPoint = 3.5;
+            }
+            else if (fstNum >= 50 && fstNum < 60) {
+                fstgrd = "B";
+                fstPoint = 3.5;
+            }
+            else if (fstNum >= 40 && fstNum < 50) {
+                fstgrd = "B";
+                fstPoint = 2.0;
+            }
+            else if (fstNum >= 33 && fstNum < 40) {
+                fstgrd = "C";
+                fstPoint = 1.0;
+            }
+            else {
+                fstgrd = "F";
+                fstPoint = 0.0;
+            }
+
+
+            $('#FirstNumberGrade').val(fstgrd);
+            $('#FirstNumberPoint').val(fstPoint);
+        
+    //////////////////////////
+
+    
+    //alert(scndNum);
+
+    if(scndNum >= 80 && scndNum <= 100)
+    {
+        scndgrd = "A+";
+        scndPoint = 5.0;
+    }
+else if(scndNum >= 70 && scndNum < 80) 
+    {
+         scndgrd = "A";
+         scndPoint = 4.0;
+    }
+else if(scndNum >= 60 && scndNum < 70) 
+    {
+         scndgrd = "A-";
+         scndPoint = 3.5;
+    }
+else if(scndNum >= 50 && scndNum < 60) 
+    {
+       // alert(scndNum);
+         scndgrd = "B";
+         scndPoint = 3.5;
+    }
+else if(scndNum >= 40 && scndNum < 50) 
+    {
+         scndgrd = "B";
+         scndPoint = 2.0;
+    }
+else if(scndNum >= 33 && scndNum < 40) 
+    {
+         scndgrd = "C";
+         scndPoint = 1.0;
+    }
+else
+    {
+         scndgrd = "F";
+         scndPoint = 0.0; 
+
+          
+
+    }
+           $('#SecondNumberGrade').val(scndgrd);
+            $('#SecondNumberPoint').val(scndPoint);
+////////////////////////////////////
+
+
+
+        totalNum = Number(fstNum) + Number(scndNum);
+        totalPoint = (Number(fstPoint) + Number(scndPoint))*0.5; 
+       // alert(totalNum)
+
+      //  status = tNum * 0.5;
+
+             $('#TotalNumber').val(totalNum);
+             $('#TotalPoint').val(totalPoint);
+
+
+        if (totalPoint == 5) 
+        {
+            totalGrade = "A+";
+        }
+        else if(totalPoint >= 4 && totalPoint < 5) 
+        {
+             totalGrade = "A";
+        }
+        else if(totalPoint >= 3.5 && totalPoint < 4) 
+        {
+             totalGrade = "A-";
+        }
+         else if(totalPoint >= 3 && totalPoint < 3.5) 
+        {
+             totalGrade = "B";
+        }
+         else if(totalPoint >= 2 && totalPoint < 3) 
+        {
+             totalGrade = "C";
+        }
+        else
+        {
+             totalGrade = "F";
+          
+        }
+         $('#TotalGrade').val(totalGrade);
+
+         
+        if (totalPoint >= 2) {
+            status = "Pass";
+        } else {
+            status = "Fail";
+        }
+
+
+         
+           $('#Status').val(status);
 
     }
 
-     $('#CreateBtn').click(function () {
+     //$('#CreateBtn').click(function () {
            
             
-            var order = {
-                SerialNumber: $('#SerialNumber').val(),
+     //       var order = {
+     //           SerialNumber: $('#SerialNumber').val(),
                 
-                SubjectId: $('#SubjectId').val(),
-                FirstNumber: $('#FirstNumber').val(),
-                FirstNumberGrade: $('#FirstNumberGrade').val(),
-                FirstNumberPoint: $('#FirstNumberPoint').val(),
-                SecondSubjectId: $('#SecondSubjectId').val(),
-                SecondNumber: $('#SecondNumber').val(),
-                SecondNumberGrade: $('#SecondNumberGrade').val(),
-                SecondNumberPoint: $('#SecondNumberPoint').val(),
-                TotalNumber: $('#TotalNumber').val(),
-                TotalPoint: $('#TotalPoint').val(),
-                TotalGrade: $('#TotalGrade').val(),
-                Status: $('#Status').val(),
+     //           SubjectId: $('#SubjectId').val(),
+     //           FirstNumber: $('#FirstNumber').val(),
+     //           FirstNumberGrade: $('#FirstNumberGrade').val(),
+     //           FirstNumberPoint: $('#FirstNumberPoint').val(),
+     //           SecondSubjectId: $('#SecondSubjectId').val(),
+     //           SecondNumber: $('#SecondNumber').val(),
+     //           SecondNumberGrade: $('#SecondNumberGrade').val(),
+     //           SecondNumberPoint: $('#SecondNumberPoint').val(),
+     //           TotalNumber: $('#TotalNumber').val(),
+     //           TotalPoint: $('#TotalPoint').val(),
+     //           TotalGrade: $('#TotalGrade').val(),
+     //           Status: $('#Status').val(),
                 
-            };
+     //       };
 
-                $.ajax({
-                type: "POST",
-                url: '@Url.Action("Create")',
-                data: order,
-                contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
-                success: function (response) {
-                    alert("Successfully generated Order");
-                    location.reload();
-                },
-                error: function () {
-                    alert('Failed to receive the Data');
-                    console.log('Failed ');
-                }
-            });
+     //           $.ajax({
+     //           type: "POST",
+     //           url: '@Url.Action("Create")',
+     //           data: order,
+     //           contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+     //           success: function (response) {
+     //               alert("Successfully generated Order");
+     //               location.reload();
+     //           },
+     //           error: function () {
+     //               alert('Failed to receive the Data');
+     //               console.log('Failed ');
+     //           }
+     //       });
 
-                });
+     //           });
 
 
 
-          error: function (XMLHttpRequest, textStatus, errorThrown) {
-                    console.log(XMLHttpRequest, textStatus, errorThrown);
-                },
-                complete: function () {
+     //     error: function (XMLHttpRequest, textStatus, errorThrown) {
+     //               console.log(XMLHttpRequest, textStatus, errorThrown);
+     //           },
+     //           complete: function () {
                   
-                }
-            });
+     //           }
+     //       });
                   
           
 

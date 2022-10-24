@@ -1,0 +1,25 @@
+﻿@*<h2>What Can JavaScript Do?</h2>
+
+        <p id="demo">JavaScript can change HTML content.</p>
+
+<button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>Click Me!</button>*@
+
+ 
+<h2>JavaScript Arithmetic</h2>
+<p>A typical arithmetic operation takes two numbers (or variables) and produces a new number.</p>
+
+<p id="demo"></p>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        let a = 200;
+        let b = 50;
+        let x = a + b;
+           document.getElementById("demo").innerHTML = x;
+    </script>
+
+
+                
+}

@@ -141,6 +141,9 @@ namespace CgpaProject.Controllers
         {
             return _db.Results.Any(e => e.Id == id);
         }
-
+        public IActionResult JavaScript()
+        {
+            return View();
+        }
     }
 }
