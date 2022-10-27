@@ -1,18 +1,17 @@
 ﻿@model Result
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Edit";
  }
 
 <div class="container">
 
     <div class="col-md-auto">
-     <h1>Create New Result-Sheet</h1>
+     <h1>Update Result Sheet</h1>
     </div>
- 
- <br/>
 
- <form asp-action="Create">
+
+     <form asp-action="Edit">
 
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
@@ -171,7 +170,7 @@
                  <div class="form-group">
 
                     <a asp-action="Index"class="btn btn-secondary">Back</a>
-                    <input type="submit" value="Create" id="CreateBtn" class="btn btn-primary"/>
+                    <input type="submit" value="Update" id="CreateBtn" class="btn btn-primary"/>
                      
                  </div>
            
@@ -385,7 +384,7 @@ else if (scndNum >= 1 && scndNum < 33) {
 
      //           $.ajax({
      //           type: "POST",
-     //           url: '@Url.Action("Create")',
+     //           url: '@Url.Action("Edit")',
      //           data: order,
      //           contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
      //           success: function (response) {
