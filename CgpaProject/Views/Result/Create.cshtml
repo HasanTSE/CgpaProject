@@ -202,6 +202,7 @@
       
 
             var fstNum = 0;
+             
             var fstgrd = "";
             var fstPoint = 0;
       //  alert(fstNum);
@@ -224,7 +225,8 @@
     ////////////////////////
 
 
-        
+        if (fstNum >= 0 && fstNum <= 100) {
+
             if (fstNum >= 80 && fstNum <= 100) {
                 fstgrd = "A+";
                 fstPoint = 5.0;
@@ -254,64 +256,104 @@
             else if (fstNum >= 1 && fstNum < 33) {
                 fstgrd = "F";
                 fstPoint = 0.0;
-            }else
-            {
-                alert("In-Valid Number");
             }
 
-
+        }
+        else {  
+           alert("In-Valid Number");
+                $('#FirstNumber').val(0.0);
+             
+                $('#TotalNumber').val(0.0);
+                
+                 $('#TotalGrade').val("");
+                 $('#Status').val("");
+                fstNum = 0.0;
+                
+                fstPoint = 0.0;
+                fstgrd = "";
+                
+                totalNum = 0.0;
+                totalPoint = 0.0;
+                totalGrade = "";
+                status = "";
+               
+        }
+            
+     
             $('#FirstNumberGrade').val(fstgrd);
             $('#FirstNumberPoint').val(fstPoint);
         
-    //////////////////////////
+                               ////////////////////////// 2nd number calculation start
 
     
     //alert(scndNum);
 
-    if(scndNum >= 80 && scndNum <= 100)
-    {
-        scndgrd = "A+";
-        scndPoint = 5.0;
-    }
-else if(scndNum >= 70 && scndNum < 80) 
-    {
-         scndgrd = "A";
-         scndPoint = 4.0;
-    }
-else if(scndNum >= 60 && scndNum < 70) 
-    {
-         scndgrd = "A-";
-         scndPoint = 3.5;
-    }
-else if(scndNum >= 50 && scndNum < 60) 
-    {
-       // alert(scndNum);
-         scndgrd = "B";
-         scndPoint = 3.5;
-    }
-else if(scndNum >= 40 && scndNum < 50) 
-    {
-         scndgrd = "B";
-         scndPoint = 2.0;
-    }
-else if(scndNum >= 33 && scndNum < 40) 
-    {
-         scndgrd = "C";
-         scndPoint = 1.0;
-    }
-else if (scndNum >= 1 && scndNum < 33) {
-         scndgrd = "F";
-         scndPoint = 0.0; 
-     }else
-     {
-          alert("In-Valid Number");
-     }
-           $('#SecondNumberGrade').val(scndgrd);
-            $('#SecondNumberPoint').val(scndPoint);
+        if(scndNum >= 80 && scndNum <= 100)
+        {
+            scndgrd = "A+";
+            scndPoint = 5.0;
+        }
+    else if(scndNum >= 70 && scndNum < 80) 
+        {
+             scndgrd = "A";
+             scndPoint = 4.0;
+        }
+    else if(scndNum >= 60 && scndNum < 70) 
+        {
+             scndgrd = "A-";
+             scndPoint = 3.5;
+        }
+    else if(scndNum >= 50 && scndNum < 60) 
+        {
+        
+             scndgrd = "B";
+             scndPoint = 3.5;
+        }
+    else if(scndNum >= 40 && scndNum < 50) 
+        {
+             scndgrd = "B";
+             scndPoint = 2.0;
+        }
+    else if(scndNum >= 33 && scndNum < 40) 
+        {
+             scndgrd = "C";
+             scndPoint = 1.0;
+        }
+    else if (scndNum >= 1 && scndNum < 33) {
+             scndgrd = "F";
+             scndPoint = 0.0; 
+         } 
+         else {  
+           alert("In-Valid Number");
+                $('#SecondNumber').val(0.0);
+             
+                $('#TotalNumber').val(0.0);
+                
+                 $('#TotalGrade').val("");
+                 $('#Status').val("");
+                scndNum = 0.0;
+                
+                scndPoint = 0.0;
+                scndgrd = "";
+                
+                totalNum = 0.0;
+                totalPoint = 0.0;
+                totalGrade = "";
+                status = "";
+               
+        }
+
+
+
+
+
+
+               $('#SecondNumberGrade').val(scndgrd);
+                $('#SecondNumberPoint').val(scndPoint);
 ////////////////////////////////////
 
 
-
+        alert(fstNum);
         totalNum = Number(fstNum) + Number(scndNum);
         totalPoint = (Number(fstPoint) + Number(scndPoint))*0.5; 
        // alert(totalNum)
@@ -342,6 +384,10 @@ else if (scndNum >= 1 && scndNum < 33) {
         {
              totalGrade = "C";
         }
+         else if(totalPoint == 0) 
+        {
+             totalGrade = " ";
+        }
         else
         {
              totalGrade = "F";
@@ -352,9 +398,12 @@ else if (scndNum >= 1 && scndNum < 33) {
          
         if (totalPoint >= 2) {
             status = "Pass";
-        } else {
+        } else if (totalPoint == 0) {
+            status = " ";
+        } else{
             status = "Fail";
-        }
+        } 
+             
 
 
          
